@@ -41,7 +41,32 @@ async function exchange(from, to, quantity) {
 }
 
 async function app() {
+
     const currencies = await fetchDataCurrency()
+
+    const currenciesArray = currencies.split(',')
+    console.log(currenciesArray)
+
+    const fromCurrency = document.getElementById('fromCurrency')
+    const toCurrency = document.getElementById('toCurrency')
+
+    currenciesArray.forEach(part => {
+
+
+        const option = document.createElement('option')
+        option.textContent = part;
+        option.value = part;
+        fromCurrency.appendChild(option)
+
+        const option2 = document.createElement('option')
+        option2.textContent = part;
+        option2.value = part;
+        toCurrency.appendChild(option2)   /// nie mozna tak na 2 opcje dla forEach
+
+    })
+
+
+
 
     exchangeButton.addEventListener('click', async () => {
         let fromCurrency = "USD"
