@@ -4,28 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 
     <title>Currency exchange</title>
 </head>
 
 <body>
     <div id="app">
-        <input id="bar" />
-        <div id="from">
-            <select id="fromCurrency">
+        <div class='white-board'>
+            <div class="headline">
+                <h1 class="title">Currency exchange</h1>
+                <p1 class="subtitle">Enter below the amount of money you want to exchange</p1>
+                <img src="exchange.png" alt="exchange-image" id="exchange-image">
 
-            </select>
-        </div>
-        <div id="to">
-            <select id="toCurrency">
+            </div>
+            <input id="bar" placeholder="Your amount" />
 
-            </select>
+            <div class="container">
+
+                <div id="from">From
+                    <select id="fromCurrency">
+
+                    </select>
+                </div>
+                <div id="to">To
+                    <select id="toCurrency">
+
+                    </select>
+                </div>
+
+
+            </div>
+
+            <button id="exchange">Exchange</button>
+            <div class='resultText'>Result</div>
+
         </div>
+
 
     </div>
-    <div class='resultText'>Result</div>
-    <button id="exchange">Exchange</button>
+
     <script src="app.js"></script>
 </body>
 
